@@ -9,6 +9,7 @@ export const products: Product[] = [
     price: 89.99,
     image: "https://images.unsplash.com/photo-1602810316498-ab67cf68c8e1?w=500",
     category: "men",
+    featured: true,
   },
   {
     id: "m2",
@@ -25,6 +26,7 @@ export const products: Product[] = [
     price: 299.99,
     image: "https://images.unsplash.com/photo-1551028719-00167b16eac5?w=500",
     category: "men",
+    featured: true,
   },
   {
     id: "m4",
@@ -59,6 +61,7 @@ export const products: Product[] = [
     price: 129.99,
     image: "https://images.unsplash.com/photo-1595777457583-95e059d581b8?w=500",
     category: "women",
+    featured: true,
   },
   {
     id: "w2",
@@ -83,6 +86,7 @@ export const products: Product[] = [
     price: 199.99,
     image: "https://images.unsplash.com/photo-1583496661160-fb5886a0aaaa?w=500",
     category: "women",
+    featured: true,
   },
   {
     id: "w5",

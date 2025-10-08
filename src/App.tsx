@@ -7,6 +7,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { toast } from "sonner";
 import Header from "@/components/Header";
 import CartSidebar from "@/components/CartSidebar";
+import Footer from "@/components/Footer";
 import Index from "./pages/Index";
 import Men from "./pages/Men";
 import Women from "./pages/Women";
@@ -65,7 +66,7 @@ const App = () => {
             />
             <main className="flex-1">
               <Routes>
-                <Route path="/" element={<Index />} />
+                <Route path="/" element={<Index onAddToCart={handleAddToCart} />} />
                 <Route
                   path="/men"
                   element={<Men onAddToCart={handleAddToCart} />}
@@ -77,6 +78,7 @@ const App = () => {
                 <Route path="*" element={<NotFound />} />
               </Routes>
             </main>
+            <Footer />
             <CartSidebar
               isOpen={isCartOpen}
               onClose={() => setIsCartOpen(false)}
