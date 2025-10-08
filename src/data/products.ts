@@ -1,0 +1,103 @@
+import { Product } from "@/types/product";
+
+export const products: Product[] = [
+  // Men's Products
+  {
+    id: "m1",
+    name: "Classic Oxford Shirt",
+    description: "Premium cotton oxford shirt with modern fit",
+    price: 89.99,
+    image: "https://images.unsplash.com/photo-1602810316498-ab67cf68c8e1?w=500",
+    category: "men",
+  },
+  {
+    id: "m2",
+    name: "Slim Fit Chinos",
+    description: "Comfortable stretch chinos for everyday wear",
+    price: 79.99,
+    image: "https://images.unsplash.com/photo-1473966968600-fa801b869a1a?w=500",
+    category: "men",
+  },
+  {
+    id: "m3",
+    name: "Leather Jacket",
+    description: "Genuine leather jacket with classic design",
+    price: 299.99,
+    image: "https://images.unsplash.com/photo-1551028719-00167b16eac5?w=500",
+    category: "men",
+  },
+  {
+    id: "m4",
+    name: "Casual Blazer",
+    description: "Versatile blazer for smart casual occasions",
+    price: 179.99,
+    image: "https://images.unsplash.com/photo-1507679799987-c73779587ccf?w=500",
+    category: "men",
+  },
+  {
+    id: "m5",
+    name: "Denim Jeans",
+    description: "Classic fit jeans in premium denim",
+    price: 99.99,
+    image: "https://images.unsplash.com/photo-1542272604-787c3835535d?w=500",
+    category: "men",
+  },
+  {
+    id: "m6",
+    name: "Cotton T-Shirt",
+    description: "Essential crew neck tee in soft cotton",
+    price: 39.99,
+    image: "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=500",
+    category: "men",
+  },
+
+  // Women's Products
+  {
+    id: "w1",
+    name: "Elegant Midi Dress",
+    description: "Flowing midi dress perfect for any occasion",
+    price: 129.99,
+    image: "https://images.unsplash.com/photo-1595777457583-95e059d581b8?w=500",
+    category: "women",
+  },
+  {
+    id: "w2",
+    name: "Silk Blouse",
+    description: "Luxurious silk blouse with modern cut",
+    price: 109.99,
+    image: "https://images.unsplash.com/photo-1564257577-1a5f3e3c8a3d?w=500",
+    category: "women",
+  },
+  {
+    id: "w3",
+    name: "High-Waist Trousers",
+    description: "Tailored trousers for a sophisticated look",
+    price: 89.99,
+    image: "https://images.unsplash.com/photo-1594633313593-bab3825d0caf?w=500",
+    category: "women",
+  },
+  {
+    id: "w4",
+    name: "Cashmere Sweater",
+    description: "Soft cashmere sweater in classic design",
+    price: 199.99,
+    image: "https://images.unsplash.com/photo-1583496661160-fb5886a0aaaa?w=500",
+    category: "women",
+  },
+  {
+    id: "w5",
+    name: "Leather Handbag",
+    description: "Premium leather handbag with gold hardware",
+    price: 249.99,
+    image: "https://images.unsplash.com/photo-1584917865442-de89df76afd3?w=500",
+    category: "women",
+  },
+  {
+    id: "w6",
+    name: "Floral Summer Dress",
+    description: "Light and breezy dress with floral pattern",
+    price: 119.99,
+    image: "https://images.unsplash.com/photo-1572804013309-59a88b7e92f1?w=500",
+    category: "women",
+  },
+];
