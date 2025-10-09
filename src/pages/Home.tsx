@@ -1,16 +1,40 @@
+import { useEffect, useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
-import heroImage from "@/assets/hero-fashion.jpg";
 import ProductCard from "@/components/ProductCard";
-import { products } from "@/data/products";
 import { Product } from "@/types/product";
+import heroImage from "@/assets/hero-fashion.jpg";
+import { supabase } from "@/integrations/supabase/client";
+import { toast } from "sonner";
 
 interface HomeProps {
   onAddToCart?: (product: Product) => void;
 }
 
 const Home = ({ onAddToCart }: HomeProps) => {
-  const featuredProducts = products.filter((p) => p.featured);
+  const [products, setProducts] = useState<Product[]>([]);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    fetchProducts();
+  }, []);
+
+  const fetchProducts = async () => {
+    try {
+      const { data, error } = await supabase
+        .from("products")
+        .select("*")
+        .eq("featured", true)
+        .limit(8);
+
+      if (error) throw error;
+      setProducts(data || []);
+    } catch (error: any) {
+      toast.error("Failed to load products");
+    } finally {
+      setLoading(false);
+    }
+  };
 
   return (
     <div className="min-h-screen">
@@ -31,12 +55,12 @@ const Home = ({ onAddToCart }: HomeProps) => {
           </p>
           <div className="flex gap-4 justify-center flex-wrap">
             <Link to="/men">
-              <Button size="lg" variant="default" className="gradient-accent shadow-elegant hover:scale-105 transition-smooth">
+              <Button size="lg" variant="default" className="shadow-elegant hover-scale transition-smooth">
                 Shop Men
               </Button>
             </Link>
             <Link to="/women">
-              <Button size="lg" variant="outline" className="bg-white/10 border-white text-white hover:bg-white hover:text-black shadow-elegant hover:scale-105 transition-smooth backdrop-blur-sm">
+              <Button size="lg" variant="outline" className="bg-white/10 border-white text-white hover:bg-white hover:text-black shadow-elegant hover-scale transition-smooth backdrop-blur-sm">
                 Shop Women
               </Button>
             </Link>
@@ -53,41 +77,49 @@ const Home = ({ onAddToCart }: HomeProps) => {
               Discover our handpicked selection of premium items
             </p>
           </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {featuredProducts.map((product, index) => (
-              <div
-                key={product.id}
-                style={{ animationDelay: `${index * 100}ms` }}
-              >
-                <ProductCard
-                  product={product}
-                  onAddToCart={onAddToCart || (() => {})}
-                />
-              </div>
-            ))}
-          </div>
+          
+          {loading ? (
+            <div className="flex justify-center py-12">
+              <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-primary"></div>
+            </div>
+          ) : (
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+              {products.map((product, index) => (
+                <div
+                  key={product.id}
+                  style={{ animationDelay: `${index * 100}ms` }}
+                  className="animate-fade-in"
+                >
+                  <ProductCard
+                    product={product}
+                    onAddToCart={onAddToCart || (() => {})}
+                  />
+                </div>
+              ))}
+            </div>
+          )}
         </div>
       </section>
 
       {/* Features Section */}
-      <section className="py-20 bg-secondary">
+      <section className="py-20 bg-muted/30">
         <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-3 gap-8 text-center">
-            <div className="p-6 hover:scale-105 transition-smooth">
+            <div className="p-6 hover-scale transition-smooth">
               <div className="text-4xl mb-4">🚚</div>
               <h3 className="text-xl font-semibold mb-2">Fast Delivery</h3>
               <p className="text-muted-foreground">
                 Quick and reliable shipping to your doorstep
               </p>
             </div>
-            <div className="p-6 hover:scale-105 transition-smooth">
+            <div className="p-6 hover-scale transition-smooth">
               <div className="text-4xl mb-4">✨</div>
               <h3 className="text-xl font-semibold mb-2">Premium Quality</h3>
               <p className="text-muted-foreground">
                 Carefully curated collection of high-quality fashion
               </p>
             </div>
-            <div className="p-6 hover:scale-105 transition-smooth">
+            <div className="p-6 hover-scale transition-smooth">
               <div className="text-4xl mb-4">💬</div>
               <h3 className="text-xl font-semibold mb-2">WhatsApp Orders</h3>
               <p className="text-muted-foreground">

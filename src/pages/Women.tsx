@@ -1,8 +1,9 @@
-import { useState, useMemo } from "react";
+import { useState, useMemo, useEffect } from "react";
 import ProductCard from "@/components/ProductCard";
 import ProductFilters from "@/components/ProductFilters";
-import { products } from "@/data/products";
 import { Product } from "@/types/product";
+import { supabase } from "@/integrations/supabase/client";
+import { toast } from "sonner";
 
 interface WomenProps {
   onAddToCart: (product: Product) => void;
@@ -11,9 +12,31 @@ interface WomenProps {
 const Women = ({ onAddToCart }: WomenProps) => {
   const [sortBy, setSortBy] = useState("featured");
   const [priceRange, setPriceRange] = useState("all");
+  const [products, setProducts] = useState<Product[]>([]);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    fetchProducts();
+  }, []);
+
+  const fetchProducts = async () => {
+    try {
+      const { data, error } = await supabase
+        .from("products")
+        .select("*")
+        .eq("category", "women");
+
+      if (error) throw error;
+      setProducts(data || []);
+    } catch (error: any) {
+      toast.error("Failed to load products");
+    } finally {
+      setLoading(false);
+    }
+  };
 
   const womenProducts = useMemo(() => {
-    let filtered = products.filter((p) => p.category === "women");
+    let filtered = products;
 
     // Apply price filter
     if (priceRange !== "all") {
@@ -36,10 +59,20 @@ const Women = ({ onAddToCart }: WomenProps) => {
       sorted.sort((a, b) => b.price - a.price);
     } else if (sortBy === "name") {
       sorted.sort((a, b) => a.name.localeCompare(b.name));
+    } else if (sortBy === "featured") {
+      sorted.sort((a, b) => (b.featured ? 1 : 0) - (a.featured ? 1 : 0));
     }
 
     return sorted;
-  }, [sortBy, priceRange]);
+  }, [products, sortBy, priceRange]);
+
+  if (loading) {
+    return (
+      <div className="min-h-screen flex items-center justify-center">
+        <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-primary"></div>
+      </div>
+    );
+  }
 
   return (
     <div className="container mx-auto px-4 py-12">
