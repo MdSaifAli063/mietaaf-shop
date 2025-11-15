@@ -46,6 +46,8 @@ npm i
 
 # 4️⃣ Start local development with auto-reload
 npm run dev
+
+```
 ✏️ 3. Edit Directly on GitHub
 Navigate to the file
 
