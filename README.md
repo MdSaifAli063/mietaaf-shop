@@ -66,7 +66,7 @@ Navigate to the file
 ## 🚀 Tech Stack
 This project is powered by the latest modern web technologies:
 
-🔧 Tech	Description
+## 🔧 Tech	Description
 ⚡ Vite	Ultra-fast build tool
 🧪 TypeScript	Safer, typed JavaScript
 ⚛️ React	UI library for building components
