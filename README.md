@@ -73,7 +73,7 @@ This project is powered by the latest modern web technologies:
 🎛️ shadcn-ui	Beautiful, customizable UI components
 🎨 Tailwind CSS	Utility-first styling
 
-🌍 Deployment
+## 🌍 Deployment
 Deploying your project is effortless!
 
 Open your Lovable project
