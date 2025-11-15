@@ -48,29 +48,22 @@ npm i
 npm run dev
 
 ```
-✏️ 3. Edit Directly on GitHub
+### ✏️ 3. Edit Directly on GitHub
 Navigate to the file
 
-Click the ✏️ Edit button
+- Click the ✏️ Edit button
+- Modify the file
+- Commit your changes
+- Super fast & simple!
 
-Modify the file
+### 🧑‍💻 4. Use GitHub Codespaces
+- No setup needed — everything runs online!
+- Go to your repo
+- Click Code → Codespaces
+- Hit New Codespace
+- Start coding instantly in the cloud
 
-Commit your changes
-
-Super fast & simple!
-
-🧑‍💻 4. Use GitHub Codespaces
-No setup needed — everything runs online!
-
-Go to your repo
-
-Click Code → Codespaces
-
-Hit New Codespace
-
-Start coding instantly in the cloud
-
-🚀 Tech Stack
+## 🚀 Tech Stack
 This project is powered by the latest modern web technologies:
 
 🔧 Tech	Description
