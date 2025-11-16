@@ -95,7 +95,9 @@ Feel free to customize, expand, and enhance your project using Lovable or your l
 If you want, I can also create:
 
 ✅ A prettier gradient header
+
 ✅ Project logo / banner
+
 ✅ A more advanced README layout
 
 yaml
