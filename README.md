@@ -90,7 +90,7 @@ Project → Settings → Domains → Connect Domain
 Read detailed documentation here:
 👉 https://docs.lovable.dev/features/custom-domain#custom-domain
 
-🎉 You're All Set!
+## 🎉 You're All Set!
 Feel free to customize, expand, and enhance your project using Lovable or your local editor.
 If you want, I can also create:
 
