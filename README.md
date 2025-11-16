@@ -67,11 +67,11 @@ Navigate to the file
 This project is powered by the latest modern web technologies:
 
 ## 🔧 Tech	Description
-⚡ Vite	Ultra-fast build tool
-🧪 TypeScript	Safer, typed JavaScript
-⚛️ React	UI library for building components
-🎛️ shadcn-ui	Beautiful, customizable UI components
-🎨 Tailwind CSS	Utility-first styling
+- ⚡ Vite	Ultra-fast build tool
+- 🧪 TypeScript	Safer, typed JavaScript
+- ⚛️ React	UI library for building components
+- 🎛️ shadcn-ui	Beautiful, customizable UI components
+- 🎨 Tailwind CSS	Utility-first styling
 
 ## 🌍 Deployment
 Deploying your project is effortless!
