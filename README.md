@@ -29,8 +29,8 @@ All changes made through Lovable will be **automatically committed** to this rep
 
 ### 💻 2. Edit Locally Using Your Own IDE
 
-Prefer VS Code or another IDE? No problem!  
-Ensure you have **Node.js** & **npm** installed. (Recommended: Install via [nvm](https://github.com/nvm-sh/nvm#installing-and-updating))
+- Prefer VS Code or another IDE? No problem!  
+- Ensure you have **Node.js** & **npm** - - installed. (Recommended: Install via - [nvm](https://github.com/nvm-sh/nv#installing-and-updating))
 
 #### 📥 Steps to get started:
 
