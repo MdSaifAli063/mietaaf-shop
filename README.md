@@ -75,11 +75,9 @@ This project is powered by the latest modern web technologies:
 - 🎨 Tailwind CSS	Utility-first styling
 
 ## 🌍 Deployment
-Deploying your project is effortless!
-
-Open your Lovable project
-
-Click Share → Publish
+- Deploying your project is effortless!
+- Open your Lovable project
+- Click Share → Publish
 
 Your site goes live instantly ✨
 
