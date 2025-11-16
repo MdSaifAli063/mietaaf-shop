@@ -84,7 +84,7 @@ Your site goes live instantly ✨
 ## 🌐 Custom Domain Support
 Yes — you can point your own domain to your Lovable project!
 
-📍 Go to:
+## 📍 Go to:
 Project → Settings → Domains → Connect Domain
 
 Read detailed documentation here:
