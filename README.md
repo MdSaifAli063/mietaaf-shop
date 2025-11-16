@@ -94,10 +94,8 @@ Read detailed documentation here:
 Feel free to customize, expand, and enhance your project using Lovable or your local editor.
 If you want, I can also create:
 
-✅ A prettier gradient header
-
-✅ Project logo / banner
-
+✅ A prettier gradient header<br>
+✅ Project logo / banner<br>
 ✅ A more advanced README layout
 
 yaml
