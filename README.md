@@ -97,6 +97,3 @@ If you want, I can also create:
 ✅ A prettier gradient header<br>
 ✅ Project logo / banner<br>
 ✅ A more advanced README layout
-
-yaml
-Copy code
