@@ -81,7 +81,7 @@ This project is powered by the latest modern web technologies:
 
 Your site goes live instantly ✨
 
-🌐 Custom Domain Support
+## 🌐 Custom Domain Support
 Yes — you can point your own domain to your Lovable project!
 
 📍 Go to:
